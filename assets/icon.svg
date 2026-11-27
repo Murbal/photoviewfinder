@@ -1,4 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#ea580c"/>
-  <text x="32" y="32" dy="0.35em" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff">P</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <clipPath id="r"><rect width="1024" height="1024" rx="226"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2a4a"/>
+      <stop offset="0.36" stop-color="#8a3d62"/>
+      <stop offset="0.52" stop-color="#f2702e"/>
+      <stop offset="0.64" stop-color="#fbbf5a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff7e0"/>
+      <stop offset="0.55" stop-color="#ffe2a0"/>
+      <stop offset="1" stop-color="#ffc25e"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a3354"/><stop offset="1" stop-color="#4a2246"/>
+    </linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1533"/><stop offset="1" stop-color="#120b1c"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+
+  <g clip-path="url(#r)">
+  <!-- scene -->
+  <rect width="1024" height="1024" fill="url(#sky)"/>
+  <circle cx="600" cy="600" r="260" fill="url(#glow)"/>
+  <circle cx="600" cy="598" r="84" fill="url(#sun)"/>
+  <path d="M0 640 L120 560 L210 610 L330 500 L440 590 L520 548 L640 630 L760 540 L880 610 L1024 520 L1024 1024 L0 1024 Z" fill="url(#far)"/>
+  <path d="M0 700 L150 625 L290 690 L420 640 L560 705 L700 650 L840 712 L1024 640 L1024 1024 L0 1024 Z" fill="url(#near)"/>
+
+  <!-- dimmed surroundings -->
+  <path fill-rule="evenodd" fill="#08080c" fill-opacity="0.66"
+        d="M0 0H1024V1024H0Z M197 342H827V762H197Z"/>
+  <rect width="1024" height="1024" fill="url(#vignette)"/>
+
+  <!-- frame line -->
+  <rect x="197" y="342" width="630" height="420" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="5"/>
+
+  <!-- corner brackets -->
+  <g fill="none" stroke="#ff7a1a" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M179 430V324H285"/>
+    <path d="M739 324H845V430"/>
+    <path d="M845 674V780H739"/>
+    <path d="M285 780H179V674"/>
+  </g>
+
+
+  <!-- focal readout ticks -->
+  <g fill="#ffffff" fill-opacity="0.55">
+    <rect x="352" y="846" width="6" height="34" rx="3"/>
+    <rect x="404" y="854" width="6" height="26" rx="3"/>
+    <rect x="456" y="854" width="6" height="26" rx="3"/>
+    <rect x="560" y="854" width="6" height="26" rx="3"/>
+    <rect x="612" y="854" width="6" height="26" rx="3"/>
+    <rect x="664" y="846" width="6" height="34" rx="3"/>
+  </g>
+  <rect x="505" y="830" width="14" height="58" rx="7" fill="#ff7a1a"/>
+  </g>
 </svg>
