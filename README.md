@@ -4,6 +4,8 @@
 
 A director's-viewfinder app for iPhone: pick a capture format (full frame, APS-C, MFT, medium format, 6×7, XPan, 4×5…) and a focal length, and the live camera shows exactly what that lens would frame — with the surroundings dimmed around it so you can see what's just outside the shot.
 
+> **Status:** a personal project, shared as is under the [MIT License](LICENSE). It isn't maintained for others: issues and pull requests won't be answered, and there are no prebuilt releases or App Store version. Fork it freely. You'll need a Mac with Xcode and your own Apple ID to build and sign it (see [Building](#building-on-the-mac)).
+
 ## Features
 
 - Frame lines for 10 formats, each with its own common focal-length presets
@@ -55,3 +57,7 @@ The app stops launching after 7 days; just build and run again from Xcode to re-
 | `PhotoComposer.swift` | Crop/orient/caption the capture and save to Photos |
 | `ViewfinderView.swift` | Main screen |
 | `SettingsView.swift` | Calibration, overlay options, diagnostics |
+
+## License
+
+[MIT](LICENSE).
